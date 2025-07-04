@@ -7,17 +7,33 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import img1 from "../../../../public/electronics.jpg";
 
 import "./styles.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Image from "next/image";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+
+const Slide = ({ src }: { src: string }) => {
+  return (
+    <AspectRatio ratio={16 / 9} className="bg-muted">
+      <Image
+        src={src}
+        alt="Carousel slide image"
+        fill
+        className="h-full w-full object-cover"
+      ></Image>
+    </AspectRatio>
+  );
+};
 
 const Carousel = () => {
   return (
     <>
       <Swiper
-      slidesPerView={1}
+        slidesPerView={1}
         loop={true}
         spaceBetween={30}
         centeredSlides={true}
@@ -32,33 +48,23 @@ const Carousel = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
+          {/* <Image src={img1} alt="carousel slide image" /> */}
         <SwiperSlide>
-          <div className="text-4xl h-[20rem]">Slide 1</div>
+          <Slide src={"/electronics.jpg"} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-4xl h-[20rem]">Slide 2</div>
+          <Slide src={"/electronics.jpg"} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-4xl h-[20rem]">Slide 3</div>
+          <Slide src={"/electronics.jpg"} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-4xl h-[20rem]">Slide 4</div>
+          <Slide src={"/electronics.jpg"} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-4xl h-[20rem]">Slide 5</div>
+          <Slide src={"/electronics.jpg"} />
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="text-4xl h-[20rem]">Slide 6</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="text-4xl h-[20rem]">Slide 7</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="text-4xl h-[20rem]">Slide 8</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="text-4xl h-[20rem]">Slide 9</div>
-        </SwiperSlide>
+     
       </Swiper>
     </>
   );
