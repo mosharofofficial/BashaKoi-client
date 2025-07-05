@@ -1,3 +1,3 @@
-# Basha Koi
+# BashaKoi
 ---
-Bash koi is a website for finding rentable flats where you can see all the flats up for rent in a specific area.
+BashaKoi is a website for finding rentable flats. Users can see all the flats up for rent in a specific area and also put their own flats up for rent.
