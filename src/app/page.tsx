@@ -1,10 +1,13 @@
 import Carousel from "@/components/Custom/carousel/Carousel";
-import Image from "next/image";
+import FloatingSearch from "@/components/Custom/FloatingSearch";
 
 export default function Home() {
   return (
-    <div>
+    <>
+      <div className="floatingSearch relative">
       <Carousel></Carousel>
-    </div>
+      <FloatingSearch  ></FloatingSearch>
+      </div>
+    </>
       );
 }
